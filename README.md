@@ -1,5 +1,5 @@
-# rick-and-morty-vue
-
+# Rick And Morty utilizando Vue 3 - Composition API, Vuex, API Rest
+![](https://i.ibb.co/QcpprPZ/principal.png)
 ## Project setup
 ```
 npm install
