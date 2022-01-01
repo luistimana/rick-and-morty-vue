@@ -9,18 +9,25 @@ export default createStore({
     setCharacters(state, playload) {
       state.characters = playload
     },
-    charactersFilter(state, playload) {
+    setCharactersFilter(state, playload) {
       state.charactersFilter = playload
     }
   },
   actions: {
     async getCharacters({commit}) {
+
       try {
+
         const response = await fetch('https://rickandmortyapi.com/api/character')
         const data = await response.json()
-        console.log(data)
+        
+        commit('setCharacters', data.results)
+        commit('setCharactersFilter', data.results)
+
       } catch(error) {
+
         console.error(error)
+
       }
     }
   },
